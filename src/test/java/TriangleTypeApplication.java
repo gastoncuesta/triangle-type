@@ -16,8 +16,14 @@ public class TriangleTypeApplication {
     @Test
     void testIsIsosceles() {
         Triangle triangle = new Triangle(5, 2, 5);
-
         assertTrue(triangle.isIsosceles());
         assertEquals("ISOSCELES", triangle.getType().name());
+    }
+
+    @Test
+    void testIsScalene() {
+        Triangle triangle = new Triangle(3, 1, 5);
+        assertTrue(triangle.isScalene());
+        assertEquals("SCALENE", triangle.getType().name());
     }
 }
