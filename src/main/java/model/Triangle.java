@@ -1,6 +1,8 @@
 package model;
 
 public class Triangle {
+
+
     public enum TriangleType {
         EQUILATERAL,
         ISOSCELES,
@@ -29,11 +31,14 @@ public class Triangle {
         if (isIsosceles()) {
             return TriangleType.ISOSCELES;
         }
+        if (isScalene()) {
+            return TriangleType.SCALENE;
+        }
         return TriangleType.INVALID;
     }
 
     public boolean isEquilateral() {
-        return this.side1 == side2 && side2 == side3;
+        return side1 == side2 && side2 == side3;
     }
 
     public boolean isIsosceles() {
@@ -43,5 +48,6 @@ public class Triangle {
     public boolean isScalene() {
         return side1 != side2 && side2 != side3 && side1 != side3;
     }
+
 
 }
