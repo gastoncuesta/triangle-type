@@ -22,8 +22,15 @@ public class TriangleTypeApplication {
 
     @Test
     void testIsScalene() {
-        Triangle triangle = new Triangle(3, 1, 5);
+        Triangle triangle = new Triangle(4, 2, 5);
         assertTrue(triangle.isScalene());
         assertEquals("SCALENE", triangle.getType().name());
+    }
+
+    @Test
+    void testIsNotATriangle() {
+        Triangle triangle = new Triangle(3, 2, 5);
+        assertTrue(triangle.isNotATriangle());
+        assertEquals("INVALID", triangle.getType().name());
     }
 }
