@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class TriangleTypeApplication {
 
     @Test
-    void testIsEquilerateral() {
+    void testIsEquilateral() {
         Triangle triangle = new Triangle(5, 5, 5);
         assertTrue(triangle.isEquilateral());
         assertEquals("EQUILATERAL", triangle.getType().name());
@@ -29,8 +29,13 @@ public class TriangleTypeApplication {
 
     @Test
     void testIsNotATriangle() {
-        Triangle triangle = new Triangle(3, 2, 5);
-        assertTrue(triangle.isNotATriangle());
-        assertEquals("INVALID", triangle.getType().name());
+        Triangle triangle1 = new Triangle(3, 2, 5);
+        Triangle triangle2 = new Triangle(-4, 2, 5);
+
+        assertTrue(triangle1.isNotATriangle());
+        assertTrue(triangle2.isNotATriangle());
+
+        assertEquals("INVALID", triangle1.getType().name());
+        assertEquals("INVALID", triangle2.getType().name());
     }
 }
