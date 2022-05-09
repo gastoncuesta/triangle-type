@@ -12,4 +12,12 @@ public class TriangleTypeApplication {
         assertTrue(triangle.isEquilateral());
         assertEquals("EQUILATERAL", triangle.getType().name());
     }
+
+    @Test
+    void testIsIsosceles() {
+        Triangle triangle = new Triangle(5, 2, 5);
+
+        assertTrue(triangle.isIsosceles());
+        assertEquals("ISOSCELES", triangle.getType().name());
+    }
 }
