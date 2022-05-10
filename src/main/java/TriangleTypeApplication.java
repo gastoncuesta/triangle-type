@@ -1,3 +1,4 @@
+import helpers.InputHelper;
 import model.Triangle;
 
 import java.util.Scanner;
@@ -13,11 +14,11 @@ public class TriangleTypeApplication {
 
         while (ok) {
             System.out.println("Enter the length of the first side: ");
-            double a = sc.nextDouble();
+            double a = InputHelper.getInputValidated(sc);
             System.out.println("Enter the length of the second side: ");
-            double b = sc.nextDouble();
+            double b = InputHelper.getInputValidated(sc);
             System.out.println("Enter the length of the third side: ");
-            double c = sc.nextDouble();
+            double c = InputHelper.getInputValidated(sc);
             System.out.println("=================================");
 
             Triangle triangle = new Triangle(a, b, c);
