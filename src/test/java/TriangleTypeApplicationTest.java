@@ -5,7 +5,7 @@ import static model.Triangle.TriangleType.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TriangleTypeApplication {
+public class TriangleTypeApplicationTest {
 
     @Test
     void testIsEquilateral() {
